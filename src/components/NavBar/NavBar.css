@@ -1,7 +1,7 @@
 .navbar-container {
     height: 5rem;
     background-color: transparent;
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 1000;
 }
@@ -21,7 +21,7 @@
 .navbar-links-container {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     color: #fff;
 }
 
