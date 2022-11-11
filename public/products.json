@@ -1,0 +1,74 @@
+[
+    {
+        "title": "HyperX Alloy Elite 2",
+        "description": "Este teclado HyperX de alto rendimiento permite que puedas disfrutar de horas ilimitadas de juegos. Está diseñado especialmente para que puedas expresar tanto tus habilidades como tu estilo. Podrás mejorar tu experiencia de gaming, ya seas un aficionado o todo un experto y hacer que tus jugadas alcancen otro nivel.",
+        "img": "https://i.ibb.co/QDcdS1t/alloy-Elite2.png",
+        "price": "23139",
+        "category": "teclados",
+        "id": "1"
+    },
+    {
+        "title": "Redragon Vata Pro K580RGB-PRO",
+        "description": "Disfrutá de tus partidas en otro nivel con Redragon, marca reconocida que se especializa en brindar la mejor experiencia de juego al público gamer desde hace más de 20 años. Sus teclados se adaptan a todo tipo de jugadores y esto los convierten en un fiel reflejo de la alta gama y calidad que la compañía ofrece.",
+        "img": "https://i.ibb.co/KWc7nW8/vataPro.png",
+        "price": "13999",
+        "category": "teclados",
+        "id": "2"
+    },
+    {
+        "title": "T-Dagger Arena T-TGK321",
+        "description": "Este teclado T-Dagger de alto rendimiento permite que puedas disfrutar de horas ilimitadas de juegos. Está diseñado especialmente para que puedas expresar tanto tus habilidades como tu estilo. Podrás mejorar tu experiencia de gaming, ya seas un aficionado o todo un experto y hacer que tus jugadas alcancen otro nivel.",
+        "img": "https://i.ibb.co/VYxnfhS/t-dagger.png",
+        "price": "4823",
+        "category": "teclados",
+        "id": "3"
+    },
+    {
+        "title": "HyperX Alloy Origins",
+        "description": "Su retroiluminación le da un toque diferente a tu equipo y resalta su composición cuando es utilizado en espacios poco iluminados.",
+        "img": "https://i.ibb.co/KNhz6W8/alloy-Origins.png",
+        "price": "14899",
+        "category": "teclados",
+        "id": "4"
+    },
+    {
+        "title": "Redragon Vata Pro K580RGB-PRO",
+        "description": "Este dispositivo tiene teclas antighosting. Esta cualidad es indispensable si requerís de un uso intensivo del periférico. Gracias a esto podrás evitar fallas al tocar varias teclas al mismo tiempo.",
+        "img": "https://i.ibb.co/KWc7nW8/vataPro.png",
+        "price": "13999",
+        "category": "teclados",
+        "id": "5"
+    },
+    {
+        "title": "Redragon Shrapnel K589RGB",
+        "description": "Tecnología antighosting",
+        "img": "https://i.ibb.co/BCkL1CB/shrnapel.png",
+        "price": "13999",
+        "category": "teclados",
+        "id": "6"
+    },
+    {
+        "title": "Xinua M3 blanco",
+        "description": "El mouse de juego te ofrecerá la posibilidad de marcar la diferencia y sacar ventajas en tus partidas. Su conectividad y sensor suave ayudará a que te desplaces rápido por la pantalla.Tecnología inalámbrica",
+        "img": "https://i.ibb.co/QbdmxT7/xinuam3.png",
+        "price": "2080",
+        "category": "mouse",
+        "id": "7"
+    },
+    {
+        "title": "Logitech G Series Lightsync G203 blanco",
+        "description": "El sistema de detección de movimiento óptico te permitirá mover el cursor de una manera más precisa y sensible que en los sistemas tradicionales.",
+        "img": "https://i.ibb.co/jh026rj/logitechlight.png",
+        "price": "4099",
+        "category": "mouse",
+        "id": "8"
+    },
+    {
+        "title": "Genius Dx-110",
+        "description": "Compatible con Windows y MacOS. Genial para ambas manos. Sensación suave y cómoda al tacto.",
+        "img": "https://i.ibb.co/3Bgd4G0/genius.png",
+        "price": "1230",
+        "category": "mouse",
+        "id": "9"
+    }
+]
