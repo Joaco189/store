@@ -1,0 +1,8 @@
+.item-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem 0;
+    max-width: 95rem;
+}
