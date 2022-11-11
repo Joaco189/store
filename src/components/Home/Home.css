@@ -1,0 +1,6 @@
+.home-section{
+    height: 100vh;
+    width: 100vw;
+    background: rgb(192,105,207);
+    background: linear-gradient(60deg, rgba(192,105,207,1) 0%, rgba(115,67,185,1) 60%, rgba(53,37,171,1) 100%);
+}
