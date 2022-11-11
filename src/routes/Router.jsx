@@ -2,6 +2,7 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import Home from '../components/Home/Home';
 import Root from '../components/Root/Root';
+import ItemListContainer from '../containers/ItemListContainer/ItemListContainer';
 
 const router = createBrowserRouter([
         {
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
                 },
                 {
                     path: "/productos",
-                    element: <h1>Error</h1>
+                    element: <ItemListContainer/>
                 },
                 {
                     path: "/category/:category",
@@ -29,10 +30,6 @@ const router = createBrowserRouter([
                     path: "/contacto",
                     element: <h1>Error</h1>
                 },
-                {
-                    path: "/sobrenosotros",
-                    element: <h1>Error</h1>
-                }
             ],
         },
     ]);
