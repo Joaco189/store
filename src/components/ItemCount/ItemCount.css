@@ -1,0 +1,62 @@
+.item-count-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.item-counter{
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.item-counter div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    font-weight: 100;
+    padding-inline: 0.5rem;
+    margin-inline: 0.5rem;
+    font-size: 1.25rem;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 15px;
+    border: 1px solid #fff;
+}
+
+.item-counter button{
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #fff;
+    transition: all .2s;
+}
+
+.item-counter button:hover{
+    transform: scale(1.12);
+}
+
+.item-purchase{
+    margin-left: 1rem;
+}
+
+.item-purchase button{
+    width: 5rem;
+    height: 2rem;
+    font-weight: 100;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.item-purchase button:hover{
+    transform: scale(1.1);
+}
