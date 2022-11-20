@@ -4,18 +4,26 @@ import "./NavBar.css";
 
 const NavBar = () => {
     const [open, setOpen] = useState(false);
+    const [ddOpen, setDdOpen] = useState(false);
 
     return (
         <>
             <div className="navbar-container">
                 <div className="navbar-content">
                     <div className="navbar-title">
-                        <h1>STORE</h1>
+                        <Link to="/"><h1>STORE</h1></Link>
                     </div>
                     <div className="navbar-links-container">
                         <div className="navbar-links">
                             <Link to="/">Inicio</Link>
-                            <Link to="/productos">Productos</Link>
+                            <div>
+                                <Link onClick={() => setDdOpen(!ddOpen)}>Productos</Link>
+                                <div className="dd-menu" style={ddOpen ? {display: "flex"} : {display: "none"}}>
+                                    <Link to="/productos" onClick={() => setDdOpen(!ddOpen)}>Todos</Link>
+                                    <Link to="/category/mouse" onClick={() => setDdOpen(!ddOpen)}>Mouses</Link>
+                                    <Link to="/category/teclados" onClick={() => setDdOpen(!ddOpen)}>Teclados</Link>
+                                </div>
+                            </div>
                             <Link to="/contacto">Contacto</Link>
                         </div>
                     </div>

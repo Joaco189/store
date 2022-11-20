@@ -14,8 +14,9 @@
     margin: 0 1.25rem;
 }
 
-.navbar-title {
+.navbar-title a{
     color: #fff;
+    text-decoration: none;
 }
 
 .navbar-links-container {
@@ -28,6 +29,7 @@
 .navbar-links {
     width: 30rem;
     display: flex;
+    position: absolute;
     justify-content: space-around;
 }
 
@@ -55,6 +57,18 @@
 .navbar-links a:hover:before {
     width: 100%;
     left: 0;
+}
+
+.dd-menu{
+    flex-direction: column;
+    position: relative;
+    background-color: #0000003d;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 1rem 0;
+    height: 5rem;
+    justify-content: space-between;
+    top: 0.5rem;
 }
 
 @media only screen and (max-device-width: 768px) {
@@ -162,11 +176,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 13rem;
     width: 100%;
     text-align: center;
     position: relative;
-    bottom: 3rem;
 }
 
 
