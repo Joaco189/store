@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { Cart } from "../../contexts/Cart";
 import ItemCount from "../ItemCount/ItemCount"
 import "./ItemDetail.css"
 
 const ItemDetail = ({producto}) => {
     const priceFormat = parseInt(producto.price).toLocaleString("es-ES", {style:"currency", currency:"ARS"})
 
+    const {addProduct} = useContext(Cart)
     const [qty, setQty] = useState(0);
 
     const purchase = (quantity) => {
-        console.log(quantity);
         setQty(quantity)
+        addProduct({...producto, quantity})
     }
 
 
