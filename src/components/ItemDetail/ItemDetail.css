@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 6rem;
+    padding-top: 12rem;
+    padding-bottom: 5rem;
 }
 
 .item-detail-card{
