@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Cart } from "../../contexts/Cart";
 import ItemCount from "../ItemCount/ItemCount"
 import "./ItemDetail.css"
@@ -8,6 +9,8 @@ const ItemDetail = ({producto}) => {
 
     const {addProduct} = useContext(Cart)
     const [qty, setQty] = useState(0);
+
+    const navigate = useNavigate()
 
     const purchase = (quantity) => {
         setQty(quantity)
@@ -31,7 +34,7 @@ const ItemDetail = ({producto}) => {
                         <span>{priceFormat}</span>
                     </div>
                     {qty ?
-                    <button className="go-to-cart">Ir al carrito</button>
+                    <button className="go-to-cart" onClick={() => navigate("/carrito")}>Ir al carrito</button>
                     :
                     <ItemCount onAdd={purchase} stock={10} initial={1}/>
                     }
