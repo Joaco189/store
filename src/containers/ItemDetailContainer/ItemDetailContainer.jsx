@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetail from '../../components/ItemDetail/ItemDetail'
+import { doc, getDoc } from "firebase/firestore";
+import { db } from '../../firebase/config';
 
 
 const ItemDetailContainer = () => {
@@ -13,10 +15,14 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         (async () => {
             try {
-                let response = await fetch('/products.json');
-                let data = await response.json();
-                const filter = data.find(producto => producto.id === itemId)
-                setProducto(filter)
+
+                const docRef = doc(db, "products", itemId);
+                const docSnap = await getDoc(docRef);
+
+                if (docSnap.exists()) {
+                    setProducto({...docSnap.data(), id: docSnap.id})
+                } 
+                
             } catch (error) {
                 console.log(error)
             }

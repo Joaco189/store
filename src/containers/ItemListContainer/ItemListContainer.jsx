@@ -2,6 +2,8 @@ import "./ItemListContainer.css"
 import ItemList from "../../components/ItemList/ItemList"
 import { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom'
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 const ItemListContainer = () => {
 
@@ -11,16 +13,31 @@ const ItemListContainer = () => {
     useEffect(() => {
         (async () => {
             try {
-                let response = await fetch("/products.json");
-                let data = await response.json();
+                const q = query(collection(db, "products"));
+                const querySnapshot = await getDocs(q);
+                const dbFirestore = []
+                querySnapshot.forEach((doc) => {
+                    dbFirestore.push({...doc.data(), id: doc.id})
+                });
+
                 if (category === "mouse"){
-                    const mouseProducts = data.filter(product => product.category === "mouse")
-                    setProductos(mouseProducts)
+                    const q = query(collection(db, "products"), where("category", "==", "mouse"));
+                    const querySnapshot = await getDocs(q);
+                    const dbFirestoreFilter = []
+                    querySnapshot.forEach((doc) => {
+                        dbFirestoreFilter.push({...doc.data(), id: doc.id})
+                    });
+                    setProductos(dbFirestoreFilter)
                 } else if (category === "teclados"){
-                    const tecladoProducts = data.filter(product => product.category === "teclados")
-                    setProductos(tecladoProducts)
+                    const q = query(collection(db, "products"), where("category", "==", "teclados"));
+                    const querySnapshot = await getDocs(q);
+                    const dbFirestoreFilter = []
+                    querySnapshot.forEach((doc) => {
+                        dbFirestoreFilter.push({...doc.data(), id: doc.id})
+                    });
+                    setProductos(dbFirestoreFilter)
                 } else {
-                    setProductos(data)
+                    setProductos(dbFirestore)
                 }
             } catch (error) {
                 console.log(error)
