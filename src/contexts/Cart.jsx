@@ -35,11 +35,13 @@ const CartProvider = ({ children }) => {
     };
 
     const calculateTotalPrice = () => {
-        let totalPrice;
-        products.forEach((product) => {
-            totalPrice = product.price * product.quantity;
-        });
-        return totalPrice;
+        const total = products.reduce(
+            (acc, product) =>
+                (acc += product.quantity * product.price),
+            0
+        );
+        const priceFormat = parseInt(total).toLocaleString("es-ES", {style:"currency", currency:"ARS"})
+        return priceFormat;
     };
 
     const calculateTotalItems = () => {
