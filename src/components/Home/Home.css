@@ -1,6 +1,42 @@
-.home-section{
-    height: 100vh;
-    width: 100vw;
-    background: rgb(192,105,207);
-    background: linear-gradient(60deg, rgba(192,105,207,1) 0%, rgba(115,67,185,1) 60%, rgba(53,37,171,1) 100%);
+.home-container{
+    padding-top: 11rem;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-text{
+    font-weight: 100;
+    color: #fff;
+    text-align: center;
+    margin: 0
+}
+
+.welcome-text span{
+    font-weight: 700;
+    margin-left: 0.3rem;
+}
+
+.controller-container{
+    height: 390px;
+}
+
+.products-button{
+    display: flex;
+    justify-content: center;
+}
+
+.products-button button{
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.3rem 1rem;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.products-button button:hover{
+    transform: scale(1.1);
 }
