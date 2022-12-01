@@ -62,7 +62,8 @@
 .dd-menu{
     flex-direction: column;
     position: relative;
-    background-color: #0000003d;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
     border: 1px solid rgb(255, 255, 255);
     border-radius: 15px;
     padding: 1rem 0;
