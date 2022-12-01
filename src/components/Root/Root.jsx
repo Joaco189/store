@@ -1,5 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import CartWidget from '../CartWidget/CartWidget'
 import NavBar from '../NavBar/NavBar'
 
 
@@ -8,6 +9,7 @@ const Root = () => {
         <>
             <NavBar />
             <Outlet />
+            <CartWidget/>
         </>
     )
 }
