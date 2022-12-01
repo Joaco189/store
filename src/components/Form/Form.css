@@ -1,0 +1,89 @@
+.form-container{
+    position: absolute;
+    height: 33rem;
+    width: 76%;
+    border-radius: 15px;
+    border: 1px solid #fff;
+    backdrop-filter: blur(10px);
+    top: 11rem;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.close-button{
+    position: absolute;
+    justify-content: flex-end;
+    top: 10px;
+    right: 10px;
+}
+
+.close-button button{
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.7rem;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.close-button button:hover{
+    transform: scale(1.1);
+}
+
+.form-content{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.form-content label{
+    color: #fff;
+    font-weight: 100;
+}
+
+.form-content input{
+    background-color: transparent;
+    text-align: center;
+    height: 1.8rem;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 15px;
+    width: 100%;
+    border: 1px solid #fff;
+    font-weight: 500;
+}
+
+.form-content input:focus-visible{
+    outline: 1px solid #fff;
+}
+
+.form-content button{
+    color: #fff;
+    width: 10rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.3rem 1rem;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.form-content button:hover{
+    transform: scale(1.1);
+}
+
+.error{
+    outline: 1px solid red;
+}
