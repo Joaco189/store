@@ -15,7 +15,9 @@ const NavBar = () => {
                     </div>
                     <div className="navbar-links-container">
                         <div className="navbar-links">
-                            <Link to="/">Inicio</Link>
+                            <div>
+                                <Link to="/">Inicio</Link>
+                            </div>
                             <div>
                                 <Link onClick={() => setDdOpen(!ddOpen)}>Productos</Link>
                                 <div className="dd-menu" style={ddOpen ? {display: "flex"} : {display: "none"}}>
@@ -24,7 +26,9 @@ const NavBar = () => {
                                     <Link to="/category/teclados" onClick={() => setDdOpen(!ddOpen)}>Teclados</Link>
                                 </div>
                             </div>
-                            <Link to="/contacto">Contacto</Link>
+                            <div>
+                                <Link to="/contacto">Contacto</Link>
+                            </div>
                         </div>
                     </div>
                     <div className="container-burguer-menu">
