@@ -2,7 +2,9 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import Home from '../components/Home/Home';
 import Root from '../components/Root/Root';
+import ItemDetailContainer from '../containers/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from '../containers/ItemListContainer/ItemListContainer';
+import CartContainer from '../containers/CartContainer/CartContainer';
 
 const router = createBrowserRouter([
         {
@@ -20,16 +22,20 @@ const router = createBrowserRouter([
                 },
                 {
                     path: "/category/:category",
-                    element: <h1>Error</h1>
+                    element: <ItemListContainer/>
                 },
                 {
                     path: "/detail/:itemId",
-                    element: <h1>Error</h1>
+                    element: <ItemDetailContainer/>
                 },
                 {
                     path: "/contacto",
                     element: <h1>Error</h1>
                 },
+                {
+                    path: "/carrito",
+                    element: <CartContainer/>
+                }
             ],
         },
     ]);
