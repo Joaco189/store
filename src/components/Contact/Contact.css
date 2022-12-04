@@ -1,0 +1,30 @@
+.contact-container{
+    padding-top: 11rem;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-content h1{
+    font-weight: 500;
+}
+
+.contact-content a{
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-size: 2rem;
+    transition: .2s;
+}
+
+.contact-content a:hover{
+    transform: scale(1.1);
+}
