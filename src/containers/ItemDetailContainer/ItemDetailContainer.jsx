@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase/config";
@@ -10,6 +10,7 @@ import MoonLoader from "react-spinners/MoonLoader";
 const ItemDetailContainer = () => {
     const { itemId } = useParams();
 
+    const navigate = useNavigate();
     const [producto, setProducto] = useState({});
     const [loading, setLoading] = useState(false);
 
@@ -21,6 +22,8 @@ const ItemDetailContainer = () => {
                 const docSnap = await getDoc(docRef);
                 if (docSnap.exists()) {
                     setProducto({ ...docSnap.data(), id: docSnap.id });
+                } else {
+                    navigate("/404");
                 }
             } catch (error) {
                 console.log(error);
