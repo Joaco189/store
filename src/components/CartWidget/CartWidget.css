@@ -4,6 +4,11 @@
     right: 1rem;
     width: 3.5rem;
     cursor: pointer;
+    transition: .2s;
+}
+
+.cart-icon-container:hover{
+    transform: scale(1.1);
 }
 
 .cart-icon-container span {
