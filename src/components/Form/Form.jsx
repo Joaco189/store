@@ -34,7 +34,7 @@ const Form = ({products, total, handleClose}) => {
         }),
         onSubmit: values => {
             const buyer = values
-            saveOrder(buyer, products, total)
+            saveOrder(buyer, products, total, handleClose)
         },
         });
     return (

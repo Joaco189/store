@@ -3,7 +3,7 @@ import { db } from "../firebase/config";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export const saveOrder = async (buyer, products, total) => {
+export const saveOrder = async (buyer, products, total, handleClose) => {
     try {
         const generatedOrder = {
             buyer: buyer,
@@ -30,8 +30,7 @@ export const saveOrder = async (buyer, products, total) => {
                 );
                 const productRef = doc(db, "products", cartProduct.id);
                 await updateDoc(productRef, {
-                    quantity:
-                        productInFirebase.quantity - cartProduct.quantity,
+                    quantity: productInFirebase.quantity - cartProduct.quantity,
                 });
             }
 
@@ -53,24 +52,24 @@ export const saveOrder = async (buyer, products, total) => {
                     theme: "light",
                 }
             );
+            handleClose();
         } else {
-            let mensaje = "";
             for (const product of productOutOfStock) {
                 const productInFirebase = productsInFirebase.find(
                     (productFirebase) => productFirebase.id === product.id
                 );
-                mensaje += `${product.title}, stock disponible: ${productInFirebase.quantity}`;
+                toast.error(`El producto "${product.title}" no tiene stock suficiente, stock disponible: ${productInFirebase.quantity}`, {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
             }
-            toast.error(`Hay productos fuera de stock: ${mensaje}`, {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: false,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
+            handleClose();
         }
     } catch (error) {
         console.log(error);
