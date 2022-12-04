@@ -6,12 +6,13 @@ import ItemDetailContainer from '../containers/ItemDetailContainer/ItemDetailCon
 import ItemListContainer from '../containers/ItemListContainer/ItemListContainer';
 import CartContainer from '../containers/CartContainer/CartContainer';
 import Contact from '../components/Contact/Contact';
+import Error from '../components/Error/Error';
 
 const router = createBrowserRouter([
         {
             path: "/",
             element: <Root />,
-            errorElement: <h1>Error</h1>,
+            errorElement: <Error/>,
             children: [
                 {
                     path: "/",
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
                 {
                     path: "/carrito",
                     element: <CartContainer/>
+                },
+                {
+                    path: "/404",
+                    element: <Error/>
                 }
             ],
         },
